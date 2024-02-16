@@ -1,0 +1,15 @@
+name: orbis
+version: '1'
+
+services:
+  webserver:
+    image: orbis/webserver
+    restart: always
+    build: .
+    ports:
+      - 8443:8443
+    develop:
+      watch:
+        - path: ./docs
+          action: sync
+          target: /code/docs
