@@ -3,18 +3,36 @@ body {
 	max-width: 100em;
 	margin: 0 auto;
 }
+
+table, table th, table td {
+	border: solid 1px gray;
+	border-collapse: collapse;
+	table-layout: fixed;
+	width: 100%;
+}
+
 div.r {
-	transform: rotate(270deg);
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	rotate: 180deg;
+	margin: 0 auto;
 }
 
 tr, th, td {
 	min-height: 2em;
 }
 
-td {
+th, td {
 	padding: .5em;
 }
 
 select {
 	width: 100%;
+}
+
+@media print {
+	select {
+		appearance: none;
+		border: none;
+	}
 }
