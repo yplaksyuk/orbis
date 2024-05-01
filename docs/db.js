@@ -71,8 +71,6 @@ export const open = () => new Promise((response, reject) => {
 	r.onupgradeneeded = (event) => {
 		const db = event.target.result;
 
-		db.deleteObjectStore('reports');
-
 		db.objectStoreNames.contains('members') || db.createObjectStore('members', { keyPath: 'id', autoIncrement: true });
 		db.objectStoreNames.contains('reports') || db.createObjectStore('reports');
 	};
