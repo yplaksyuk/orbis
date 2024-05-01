@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+		<script src="https://cdn.jsdelivr.net/gh/yplaksyuk/jquery-gears/jquery-input.js"></script>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yplaksyuk/jquery-gears/jquery-grid.css" />
+		<script src="https://cdn.jsdelivr.net/gh/yplaksyuk/jquery-gears/jquery-grid.js"></script>
+
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="ministry.css" />
+		<script src="ministry.js" type="module"></script>
+	</head>
+<body>
+	<nav>
+		<a href="members.html">Список возвещателей</a>
+
+		<button id="monthPrevButton">&lt;&lt;</button>
+		<input type="text" id="monthDisplay" readonly />
+		<button id="monthNextButton">&gt;&gt;</button>
+	</nav>
+	<main>
+	</main>
+
+	<template id="groupTemplate">
+		<section class="group">
+			<h1>Группа №<span class="group-no"></span></h1>
+
+			<table class="group--grid">
+				<colgroup>
+					<col name="name" style="width: 12em;" />
+					<col name="shared" style="width: 2em;" />
+					<col name="studies" style="width: 4em;" />
+					<col name="auxiliary" style="width: 2em;" />
+					<col name="hours" style="width: 4em;" />
+					<col name="remarks" style="width: 20em;" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th>ФИО</th>
+						<th>Служил</th>
+						<th>Изучений</th>
+						<th>Подсобный</th>
+						<th>Часы</th>
+						<th>Примечания</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</section>
+	</template>
+
+	<template id="gridRowTemplate">
+		<tr class="group--grid-row">
+			<td><input type="text" name="name" readonly /></td>
+			<td><input type="checkbox" name="shared" /></td>
+			<td><input type="text" name="studies" class="report numeric" inputmode="numeric" pattern="\d*" size="2" /></td>
+			<td><input type="checkbox" name="auxiliary" class="report" /></td>
+			<td><input type="text" name="hours" class="report numeric" inputmode="numeric" pattern="\d*" size="2" /></td>
+			<td><input type="text" name="remarks" class="report" /></td>
+		</tr>
+	</template>
+</body>
+</html>
+

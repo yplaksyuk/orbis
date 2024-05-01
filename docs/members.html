@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+		<script src="https://cdn.jsdelivr.net/gh/yplaksyuk/jquery-gears/jquery-input.js"></script>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yplaksyuk/jquery-gears/jquery-grid.css" />
+		<script src="https://cdn.jsdelivr.net/gh/yplaksyuk/jquery-gears/jquery-grid.js"></script>
+
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="members.css" />
+		<script src="members.js" type="module"></script>
+	</head>
+<body>
+	<nav>
+		<a href="ministry.html">Отчеты о служении</a>
+
+		<button id="memberAddButton">Add</button>
+		<button id="memberEditButton">Edit</button>
+		<button id="memberRemoveButton">Remove</button>
+	</nav>
+	<main>
+	<table id="memberGrid">
+		<colgroup>
+			<col name="id" style="width: 2em;" />
+			<col name="name" />
+			<col name="sex" style="width: 5em;" />
+			<col name="birthDate" style="width: 8em;" />
+			<col name="baptiseDate" style="width: 8em;" />
+			<col name="groupNo" style="width: 3em;" />
+			<col name="servStatus" style="wifth: 10em;" />
+			<col name="congStatus" style="wifth: 10em;" />
+		</colgroup>
+		<thead>
+			<tr>
+				<th></th>
+				<th>ФИО</th>
+				<th>Пол</th>
+				<th>Дата рождения</th>
+				<th>Дата крещения</th>
+				<th>Группа</th>
+				<th>В служении</th>
+				<th>В собрании</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	</main>
+
+	<dialog id="memberDialog">
+		<div class="dialog-header">Данные о возвещателе</div>
+
+		<div class="dialog-canvas">
+		<label>ФИО</label>
+		<span><input type="text" name="name" size="40" autocomplete="off" /></span>
+
+		<label>Пол</label>
+		<span>
+			<label><input type="radio" name="sex" value="M" /> Мужчина</label>
+			<label><input type="radio" name="sex" value="F" /> Женщина</label>
+		</span>
+
+		<label>Дата рождения</label>
+		<span><input type="date" class="input" name="birthDate" /></span>
+
+		<label>Дата крещения</label>
+		<span><input type="date" class="input" name="baptiseDate" /></span>
+
+		<label>Группа</label>
+		<span><input type="text" name="groupNo" /></span>
+
+		<label>В служении</label>
+		<span>
+			<select name="servStatus">
+				<option value="publisher">Возвещатель</option>
+				<option value="pioneer">Общий пионер</option>
+				<option value="special">Специальный поинер</option>
+			</select>
+		</span>
+
+		<label>В собрании</label>
+		<span>
+			<select name="congStatus">
+				<option value="regular"></option>
+				<option value="servant">Служитель собрания</option>
+				<option value="elder">Старейшина</option>
+			</select>
+		</span>
+		</div>
+
+		<div class="dialog-footer">
+		<button id="memberDialogOK">OK</button>
+		<button id="memberDialogCancel">Отменить</button>
+		</div>
+
+		<input type="hidden" name="id" />
+	</dialog>
+</body>
+</html>
+

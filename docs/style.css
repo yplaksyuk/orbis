@@ -4,6 +4,10 @@ body {
 	margin: 0 auto;
 }
 
+main {
+	position: relative;
+}
+
 table, table th, table td {
 	border: solid 1px gray;
 	border-collapse: collapse;
@@ -35,4 +39,51 @@ select {
 		appearance: none;
 		border: none;
 	}
+}
+
+dialog {
+	padding: 0;
+}
+
+dialog > div {
+	padding: .5em;
+}
+
+.dialog-header {
+	background-color: lightblue;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.dialog-canvas {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: 2em;
+}
+
+.dialog-footer {
+	background-color: lightgray;
+	text-align: right;
+}
+
+::backdrop {
+  background-image: linear-gradient(
+    45deg,
+    magenta,
+    rebeccapurple,
+    dodgerblue,
+    green
+  );
+  opacity: 0.75;
+}
+
+input.numeric {
+	text-align: right;
+}
+
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
 }

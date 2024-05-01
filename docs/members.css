@@ -1,0 +1,4 @@
+#memberDialog .dialog-canvas {
+	grid-template-columns: 8em 1fr;
+}
+
