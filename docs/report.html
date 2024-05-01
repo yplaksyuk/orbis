@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+		<script src="https://cdn.jsdelivr.net/gh/yplaksyuk/jquery-gears/jquery-input.js"></script>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yplaksyuk/jquery-gears/jquery-grid.css" />
+		<script src="https://cdn.jsdelivr.net/gh/yplaksyuk/jquery-gears/jquery-grid.js"></script>
+
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="report.css" />
+		<script src="report.js" type="module"></script>
+	</head>
+<body>
+	<nav>
+		<a href="ministry.html">Отчеты о служении</a>
+	</nav>
+	<main>
+	</main>
+
+	<template id="reportTemplate">
+		<section class="report">
+			<h1>Записи собрания о служении возвещателя</h1>
+
+			<label>ФИО: <input type="text" name="name" readonly /></label>
+			<label>Дата рождения: <input type="date" name="birthDate" readonly /></label>
+			<label>Дата крещения: <input type="date" name="baptiseDate" readonly /></label>
+
+			<label><input type="checkbox" name="male" readonly /> Мужчина</label>
+			<label><input type="checkbox" name="female" readonly /> Женщина</label>
+
+			<label><input type="checkbox" name="other" checked readonly /> Другая овца</label>
+			<label><input type="checkbox" name="anointed" readonly /> Помазанный</label>
+
+			<label><input type="checkbox" name="elder" readonly /> Старейшина</label>
+			<label><input type="checkbox" name="servant" readonly /> Помощник собрания</label>
+			<label><input type="checkbox" name="pioneer" readonly /> Общий пионер</label>
+			<label><input type="checkbox" name="special" readonly /> Специальный пионер</label>
+			<label><input type="checkbox" name="missionary" readonly /> Миссионер</label>
+
+			<table class="report--grid">
+				<colgroup>
+					<col name="month" style="width: 8em;" />
+					<col name="shared" style="width: 2em;" />
+					<col name="studies" style="width: 4em;" />
+					<col name="auxiliary" style="width: 2em;" />
+					<col name="hours" style="width: 4em;" />
+					<col name="remarks" style="width: 20em;" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Служебный год</th>
+						<th>Участвовал в служении</th>
+						<th>Изучения Библии</th>
+						<th>Подсобный пионер</th>
+						<th>Часы</th>
+						<th>Примечания</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</section>
+	</template>
+
+	<template id="gridRowTemplate">
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</template>
+</body>
+</html>
+

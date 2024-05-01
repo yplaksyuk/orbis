@@ -1,8 +1,7 @@
 import { open } from './db.js';
+import * as i18n from './i18n.js';
 
 const db = await open();
-
-const monthFormatter = new Intl.DateTimeFormat(undefined, { year: 'numeric', month: 'long' });
 
 let { year, month } = (function() {
 	const date = new Date(); date.setMonth(date.getMonth() - 1);
@@ -14,7 +13,7 @@ const updateMonthDisplay = async (delta = 0) => {
 	year = date.getFullYear();
 	month = date.getMonth();
 
-	$('#monthDisplay').val(monthFormatter.format(date));
+	$('#monthDisplay').val(i18n.formatMonthYear(month, year));
 
 	$('.group input:not([name=name])').val(null, false);
 	const v = $('.group input.report').prop('disabled', true);
