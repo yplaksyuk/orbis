@@ -40,8 +40,8 @@ class Database {
 	}
 
 	updateMember(member) {
-		member.updated = new Date();
-		member.id = parseInt(member.id);
+		member.id = +member.id;
+		member.updated = member.updated || new Date();
 
 		return exec(this.db, 'members', 'readwrite', 'put', member);
 	}
@@ -65,7 +65,8 @@ class Database {
 
 	updateReport(report) {
 		report.memberId = +report.memberId;
-		report.updated = new Date();
+		report.updated = report.updated || new Date();
+
 		return exec(this.db, 'reports', 'readwrite', 'put', report, getReportKey(report));
 	}
 
