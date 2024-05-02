@@ -1,0 +1,9 @@
+@media print {
+	nav {
+		display: none;
+	}
+
+	section.report {
+		break-inside: avoid;
+	}
+}

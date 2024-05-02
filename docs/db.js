@@ -55,6 +55,14 @@ class Database {
 		return exec(this.db, 'reports', 'readonly', 'getAll', getQuery(year, month));
 	}
 
+	getAllReports() {
+		return exec(this.db, 'reports', 'readonly', 'getAll');
+	}
+
+	findReport(report) {
+		return exec(this.db, 'reports', 'readonly', 'get', getReportKey(report));
+	}
+
 	updateReport(report) {
 		report.updated = new Date();
 		return exec(this.db, 'reports', 'readwrite', 'put', report, getReportKey(report));
