@@ -43,7 +43,7 @@ const importData = async (data) => {
 
 	if (data.reports) {
 		await Promise.all(data.reports.map(async (report) => {
-			report.memberId = String(ids.get(report.memberId) || report.memberId);
+			report.memberId = ids.get(report.memberId) || report.memberId;
 
 			let local = await db.findReport(report);
 			if (!local || report.updated > local.updated)
