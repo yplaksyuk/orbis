@@ -1,3 +1,7 @@
+.group--grid-row:hover {
+	background: yellow;
+}
+
 .group--grid-row input[type=text] {
 	width: 100%
 }

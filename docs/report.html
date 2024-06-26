@@ -23,28 +23,32 @@
 		<section class="report">
 			<h1>Записи собрания о служении возвещателя</h1>
 
-			<label>ФИО: <input type="text" name="name" readonly /></label>
-			<label>Дата рождения: <input type="date" name="birthDate" readonly /></label>
-			<label>Дата крещения: <input type="date" name="baptiseDate" readonly /></label>
+			<div class="report--header">
+				<label>ФИО: <input type="text" name="name" readonly /></label>
+				<label>Дата рождения: <input type="date" name="birthDate" readonly /></label>
+				<label>Дата крещения: <input type="date" name="baptiseDate" readonly /></label>
 
-			<label><input type="checkbox" name="male" readonly /> Мужчина</label>
-			<label><input type="checkbox" name="female" readonly /> Женщина</label>
+				<label><input type="checkbox" name="male" onclick="return false;" /> Мужчина</label>
+				<label><input type="checkbox" name="female" onclick="return false;" /> Женщина</label>
+			</div>
 
-			<label><input type="checkbox" name="other" checked readonly /> Другая овца</label>
-			<label><input type="checkbox" name="anointed" readonly /> Помазанный</label>
+			<div class="report--header">
+				<label><input type="checkbox" name="other" checked onclick="return false;" /> Другая овца</label>
+				<label><input type="checkbox" name="anointed" onclick="return false;" /> Помазанный</label>
 
-			<label><input type="checkbox" name="elder" readonly /> Старейшина</label>
-			<label><input type="checkbox" name="servant" readonly /> Помощник собрания</label>
-			<label><input type="checkbox" name="pioneer" readonly /> Общий пионер</label>
-			<label><input type="checkbox" name="special" readonly /> Специальный пионер</label>
-			<label><input type="checkbox" name="missionary" readonly /> Миссионер</label>
+				<label><input type="checkbox" name="elder" onclick="return false;" /> Старейшина</label>
+				<label><input type="checkbox" name="servant" onclick="return false;" /> Помощник собрания</label>
+				<label><input type="checkbox" name="pioneer" onclick="return false;" /> Общий пионер</label>
+				<label><input type="checkbox" name="special" onclick="return false;" /> Специальный пионер</label>
+				<label><input type="checkbox" name="missionary" onclick="return false;" /> Миссионер</label>
+			</div>
 
 			<table class="report--grid">
 				<colgroup>
 					<col name="month" style="width: 8em;" />
-					<col name="shared" style="width: 2em;" />
+					<col name="shared" style="width: 4em;" />
 					<col name="studies" style="width: 4em;" />
-					<col name="auxiliary" style="width: 2em;" />
+					<col name="auxiliary" style="width: 4em;" />
 					<col name="hours" style="width: 4em;" />
 					<col name="remarks" style="width: 20em;" />
 				</colgroup>

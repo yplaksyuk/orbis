@@ -1,9 +1,33 @@
+.report--header {
+	display: flex;
+	gap: 1.2em;
+	margin-bottom: .5em;
+}
+
+.report--header input:not([type=checkbox]) {
+	border: none;
+	font-size: 1em;
+	color: black;
+}
+
+.report--grid td:nth-child(2),
+.report--grid td:nth-child(3),
+.report--grid td:nth-child(4),
+.report--grid td:nth-child(5) {
+	text-align: center;
+}
+
 @media print {
+	body {
+		zoom: 0.6;
+	}
+
 	nav {
 		display: none;
 	}
 
 	section.report {
 		break-inside: avoid;
+		margin-bottom: 5em;
 	}
 }
