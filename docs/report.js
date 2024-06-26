@@ -44,9 +44,9 @@ $(async function() {
 	members.sort((a, b) => (a.name < b.name) ? -1 : 1);
 	members.forEach((member) => {
 		const reportSection = reportTemplate.clone().appendTo('main');
-		reportSection.find('[name=name]').val(member.name);
-		reportSection.find('[name=birthDate]').val(member.birthDate);
-		reportSection.find('[name=baptiseDate]').val(member.baptiseDate);
+		reportSection.find('[name=name]').attr('value', member.name);
+		reportSection.find('[name=birthDate]').attr('value', member.birthDate);
+		reportSection.find('[name=baptiseDate]').attr('value', member.baptiseDate);
 
 		if (member.sex == 'M')
 			reportSection.find('[name=male]').prop('checked', true);

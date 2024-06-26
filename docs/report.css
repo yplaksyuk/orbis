@@ -1,3 +1,7 @@
+.report {
+	margin-bottom: 5em;
+}
+
 .report--header {
 	display: flex;
 	gap: 1.2em;
@@ -8,6 +12,10 @@
 	border: none;
 	font-size: 1em;
 	color: black;
+}
+
+.report--header input[value=''] {
+	visibility: hidden;
 }
 
 .report--grid td:nth-child(2),
@@ -28,6 +36,5 @@
 
 	section.report {
 		break-inside: avoid;
-		margin-bottom: 5em;
 	}
 }
