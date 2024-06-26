@@ -5,11 +5,17 @@ body {
 }
 
 nav {
+	display: flex;
 	position: sticky;
 	top: 0;
 	background: white;
 	z-index: 1000;
-	padding: .3em 0 .5em 0;
+	padding: 1em 0 1em 0;
+	gap: 1em;
+}
+
+nav .spacer {
+	flex-grow: 1;
 }
 
 main {

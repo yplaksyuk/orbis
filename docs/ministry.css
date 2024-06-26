@@ -1,3 +1,7 @@
+nav #monthDisplay {
+	text-align: center	
+}
+
 .group--grid-row td:nth-child(2),
 .group--grid-row td:nth-child(3) {
 	text-align: center;
