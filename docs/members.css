@@ -1,3 +1,10 @@
+.members--grid td:nth-child(3),
+.members--grid td:nth-child(4),
+.members--grid td:nth-child(5),
+.members--grid td:nth-child(6) {
+	text-align: center;
+}
+
 #memberDialog .dialog-canvas {
 	grid-template-columns: 8em 1fr;
 }

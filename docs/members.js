@@ -1,10 +1,16 @@
 import { open } from './db.js';
+import * as i18n from './i18n.js';
 
 const db = await open();
 
 $(function() {
 
-	const memberGrid = $('#memberGrid').grid({ selectionMode: 'single', selectColumnIndex: 0, fixedHeader: false });
+	const memberGrid = $('#memberGrid')
+		.grid({ selectionMode: 'single', selectColumnIndex: 0, fixedHeader: false })
+		.grid('format', 'sex', i18n.formatSex)
+		.grid('format', 'birthDate baptiseDate', i18n.formatDate)
+		.grid('format', 'servStatus', i18n.formatServStatus)
+		.grid('format', 'congStatus', i18n.formatCongStatus)
 
 	const memberDialog = document.querySelector('#memberDialog');
 
@@ -51,6 +57,7 @@ $(function() {
 	});
 
 	db.getMembers().then((members) => {
+		members.sort((a, b) => (a.name < b.name) ? -1 : 1);
 		memberGrid.grid('append', members);
 	});
 

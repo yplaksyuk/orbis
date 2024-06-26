@@ -1,7 +1,15 @@
 body {
 	width: 100%;
 	max-width: 70em;
-	margin: 0 auto;
+	margin: 0 auto 5em auto;
+}
+
+nav {
+	position: sticky;
+	top: 0;
+	background: white;
+	z-index: 1000;
+	padding: .3em 0 .5em 0;
 }
 
 main {
