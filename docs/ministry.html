@@ -32,19 +32,19 @@
 			<table class="group--grid">
 				<colgroup>
 					<col name="name" style="width: 12em;" />
-					<col name="shared" style="width: 2em;" />
-					<col name="studies" style="width: 4em;" />
-					<col name="auxiliary" style="width: 2em;" />
+					<col name="shared" style="width: 4em;" />
+					<col name="auxiliary" style="width: 4em;" />
 					<col name="hours" style="width: 4em;" />
+					<col name="studies" style="width: 4em;" />
 					<col name="remarks" style="width: 20em;" />
 				</colgroup>
 				<thead>
 					<tr>
 						<th>ФИО</th>
 						<th>Служил</th>
-						<th>Изучений</th>
 						<th>Подсобный</th>
 						<th>Часы</th>
+						<th>Изучений</th>
 						<th>Примечания</th>
 					</tr>
 				</thead>
@@ -57,9 +57,9 @@
 		<tr class="group--grid-row">
 			<td><input type="text" name="name" readonly /></td>
 			<td><input type="checkbox" name="shared" /></td>
-			<td><input type="text" name="studies" class="report numeric" inputmode="numeric" pattern="\d*" size="2" /></td>
 			<td><input type="checkbox" name="auxiliary" class="report" /></td>
 			<td><input type="text" name="hours" class="report numeric" inputmode="numeric" pattern="\d*" size="2" /></td>
+			<td><input type="text" name="studies" class="report numeric" inputmode="numeric" pattern="\d*" size="2" /></td>
 			<td><input type="text" name="remarks" class="report" /></td>
 		</tr>
 	</template>

@@ -1,7 +1,15 @@
+.group--grid-row td:nth-child(2),
+.group--grid-row td:nth-child(3) {
+	text-align: center;
+}
+
 .group--grid-row:hover {
-	background: yellow;
+	background: lightblue;
 }
 
 .group--grid-row input[type=text] {
-	width: 100%
+	width: 100%;
+	border: none;
+	font-size: 1em;
+	background-color: transparent;
 }
