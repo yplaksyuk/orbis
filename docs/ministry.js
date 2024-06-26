@@ -52,8 +52,11 @@ $(function() {
 
 			list.forEach((member) => {
 				const gridRow = $('#gridRowTemplate').contents().clone().appendTo(groupBody);
-				gridRow.attr('id', member.id);
-				gridRow.find('[name=name]').val(member.name);
+				gridRow
+					.attr('id', member.id)
+					.addClass(member.servStatus)
+					.addClass(member.congStatus)
+					.find('[name=name]').val(member.name);
 			});
 		});
 

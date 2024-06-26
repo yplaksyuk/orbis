@@ -7,6 +7,16 @@
 	background: lightblue;
 }
 
+.group--grid-row.pioneer,
+.group--grid-row.special {
+	background: wheat;
+}
+
+.group--grid-row.pioneer:hover,
+.group--grid-row.special:hover {
+	background: steelblue;
+}
+
 .group--grid-row input[type=text] {
 	width: 100%;
 	border: none;
